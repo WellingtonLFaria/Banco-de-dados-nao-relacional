@@ -1,0 +1,8 @@
+[
+    {
+        "livro_nome": "O Hobbit",
+        "cliente_nome": "Wellington",
+        "data_emprestimo": "2023-09-21",
+        "data_devolução": "2023-10-21"
+    }
+]

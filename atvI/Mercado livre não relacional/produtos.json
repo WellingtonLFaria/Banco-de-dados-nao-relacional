@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "Shampoo",
+        "descricao": "Shampoo para cabelos oleosos",
+        "caracteristicas_do_produto": "Shampoo para cabelos oleosos, com extrato de limão e hortelã, limpa e refresca o couro cabeludo, deixando os cabelos soltos e brilhantes.",
+        "valor": 15.00,
+        "fornecedor": "Natura"
+    },
+    {
+        "nome": "Condicionador",
+        "descricao": "Condicionador para cabelos oleosos",
+        "caracteristicas_do_produto": "Condicionador para cabelos oleosos, com extrato de limão e hortelã, desembaraça e hidrata os cabelos, deixando-os soltos e brilhantes.",
+        "valor": 15.00,
+        "fornecedor": "Natura"
+    },
+    {
+        "nome": "Sabonete",
+        "descricao": "Sabonete em barra",
+        "caracteristicas_do_produto": "Sabonete em barra, com extrato de limão e hortelã, limpa e refresca a pele, deixando-a macia e perfumada.",
+        "valor": 5.00,
+        "fornecedor": "Natura"
+    },
+    {
+        "nome": "Creme Hidratante",
+        "descricao": "Creme hidratante para o corpo",
+        "caracteristicas_do_produto": "Creme hidratante para o corpo, com extrato de limão e hortelã, hidrata e refresca a pele, deixando-a macia e perfumada.",
+        "valor": 20.00,
+        "fornecedor": "Natura"
+    }
+]

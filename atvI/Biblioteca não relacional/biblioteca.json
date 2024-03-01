@@ -1,0 +1,47 @@
+{
+    "Clientes": [
+        {
+            "nome": "Wellington",
+            "endereço": {
+                "logradouro": "Rua Cláudia Pombo da Silva Carvalho de Melo",
+                "bairro": "Santa Helena",
+                "cidade": "São José dos Campos",
+                "estado": "São Paulo",
+                "país": "Brasil",
+                "códigoPostal": "12225885"
+            },
+            "telefone": {
+                "ddd": 12,
+                "número": 996680123
+            }
+        }
+    ],
+    "Gêneros": [
+        {
+            "tipo": "Ação"
+        }
+    ],
+    "Livros": [
+        {
+            "nome": "O Hobbit",
+            "descricao": "Bilbo Bolseiro é um hobbit que leva uma vida confortável e sem ambições, raramente aventurando-se para além de sua despensa ou sua adega. Mas seu contentamento é perturbado quando Gandalf, o mago, e uma companhia de anões batem em sua porta e levam-no para uma expedição.",
+            "data_lancamento": "1937-09-21",
+            "genero": "Ação",
+            "editora": "WMF Martins Fontes",
+            "autor": "J. R. R. Tolkien"
+        }
+    ],
+    "Autores": [
+        {
+            "nome": "J. R. R. Tolkien"
+        }
+    ],
+    "Emprestimos": [
+        {
+            "livro_nome": "O Hobbit",
+            "cliente_nome": "Wellington",
+            "data_emprestimo": "2023-09-21",
+            "data_devolução": "2023-10-21"
+        }
+    ]
+}

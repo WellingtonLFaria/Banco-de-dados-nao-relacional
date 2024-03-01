@@ -1,0 +1,58 @@
+[
+    {
+        "nome": "Wellington",
+        "sobrenome": "Faria",
+        "email": "wellington.faria@gmail.com",
+        "senha": "123456",
+        "telefone": "11999999999",
+        "cpf": "12345678901",
+        "endereços": [
+            {
+                "logradouro": "Rua das Flores",
+                "numero": "0",
+                "complemento": "Apto 101",
+                "bairro": "Centro",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "12345678"
+            },
+            {
+                "logradouro": "Rua dos eletricistas",
+                "numero": "0",
+                "complemento": "Apto 012",
+                "bairro": "Centro",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "12345789"
+            }
+        ]
+    },
+    {
+        "nome": "Fernando",
+        "sobrenome": "Faria",
+        "email": "fernando.faria@gmail.com",
+        "senha": "123456",
+        "telefone": "11999999999",
+        "cpf": "12345678902",
+        "endereços": [
+            {
+                "logradouro": "Rua das Flores",
+                "numero": "0",
+                "complemento": "Apto 101",
+                "bairro": "Centro",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "12345678"
+            },
+            {
+                "logradouro": "Rua dos eletricistas",
+                "numero": "0",
+                "complemento": "Apto 012",
+                "bairro": "Centro",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "12345789"
+            }
+        ]
+    }
+]

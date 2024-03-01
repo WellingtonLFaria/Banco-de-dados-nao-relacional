@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "produto": {
+            "nome": "Shampoo",
+            "valor": 15.00,
+            "fornecedor": "Natura"
+        },
+        "usuario": {
+            "nome": "Wellington",
+            "sobrenome": "Faria",
+            "cpf": "12345678901",
+            "email": "wellington.faria@gmail.com",
+            "telefone": "11999999999"
+        },
+        "endereço": {
+            "logradouro": "Rua das Flores",
+            "numero": "0",
+            "complemento": "Apto 101",
+            "bairro": "Centro",
+            "cidade": "São Paulo",
+            "estado": "SP",
+            "cep": "12345678"
+        },
+        "quantidade": 2,
+        "valor_total": 30.00
+    }
+]

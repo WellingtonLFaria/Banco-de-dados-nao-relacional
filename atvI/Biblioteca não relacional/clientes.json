@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Wellington",
+        "endereço": {
+            "logradouro": "Rua Cláudia Pombo da Silva Carvalho de Melo",
+            "bairro": "Santa Helena",
+            "cidade": "São José dos Campos",
+            "estado": "São Paulo",
+            "país": "Brasil",
+            "códigoPostal": "12225885"
+        },
+        "telefone": {
+            "ddd": 12,
+            "número": 996680123
+        }
+    }
+]
