@@ -4,14 +4,14 @@
             "nome": "O Hobbit",
             "autor": "J. R. R. Tolkien",
             "editora": "WMF Martins Fontes"
-        }
+        },
         "cliente": {
             "nome": "Wellington",
             "telefone": {
                 "ddd": 12,
                 "número": 996680123
             }
-        }
+        },
         "data_emprestimo": "2023-09-21",
         "data_devolução": "2023-10-21"
     }
