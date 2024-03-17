@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from pprint import pprint
 
 class ListarProdutos:
     def __init__(self, client: MongoClient):
@@ -10,4 +11,5 @@ class ListarProdutos:
         data = self.collection.find()
         self.produtos = [produto for produto in data]
         for produto in self.produtos:
-            print(f'{self.produtos.index(produto)} - Nome: {produto["nome"]} | Descrição: {produto["descricao"]} | Valor: {produto["valor"]}\n{"-"*30}')
+            print(self.produtos.index(produto), end=" - ")
+            pprint(produto)

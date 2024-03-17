@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from pprint import pprint
 
 class ListarUsuarios:
     def __init__(self, client: MongoClient):
@@ -10,4 +11,5 @@ class ListarUsuarios:
         data = self.collection.find()
         self.usuarios = [usuario for usuario in data]
         for usuario in self.usuarios:
-            print(f'{self.usuarios.index(usuario)} - Nome: {usuario["nome"]} | CPF: {usuario["cpf"]}\n{"-"*30}')
+            print(self.usuarios.index(usuario), end=" - ")
+            pprint(usuario)
