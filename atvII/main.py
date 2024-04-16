@@ -11,6 +11,10 @@ from processos.deletarUsuario import DeletarUsuario
 from processos.deletarProduto import DeletarProduto
 from processos.deletarVendedor import DeletarVendedor
 from processos.deletarVenda import DeletarVenda
+from processos.atualizarUsuario import AtualizarUsuario
+from processos.atualizarProduto import AtualizarProduto
+from processos.atualizarVendedor import AtualizarVendedor
+from processos.atualizarVenda import AtualizarVenda
 
 processo = ConectarBanco("mongodb+srv://wellingtonfaria:fatec@cluster0.mb3qx5b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 CLIENT = processo.conectar()
@@ -29,6 +33,10 @@ while k != 0:
     print("10 - Deletar produto")
     print("11 - Deletar vendedor")
     print("12 - Deletar venda")
+    print("13 - Atualizar usuário")
+    print("14 - Atualizar produto")
+    print("15 - Atualizar vendedor")
+    print("16 - Atualizar venda")
     print("0 - Sair")
     k = int(input("Digite a opção desejada: "))
     print("-"*30)
@@ -70,6 +78,18 @@ while k != 0:
         case 12:
             processo = DeletarVenda(CLIENT)
             processo.deletar()
+        case 13:
+            processo = AtualizarUsuario(CLIENT)
+            processo.atualizar()
+        case 14:
+            processo = AtualizarProduto(CLIENT)
+            processo.atualizar()
+        case 15:
+            processo = AtualizarVendedor(CLIENT)
+            processo.atualizar()
+        case 16:
+            processo = AtualizarVenda(CLIENT)
+            processo.atualizar()
         case 0:
             break
         case _:
