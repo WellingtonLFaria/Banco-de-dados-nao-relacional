@@ -5,7 +5,7 @@ class ListarUsuarios:
     def __init__(self, client: MongoClient):
         self.client = client
         self.db = self.client.MercadoLivre
-        self.collection = self.db.Usuario
+        self.collection = self.db.Usuarios
 
     def listar(self):
         data = self.collection.find()

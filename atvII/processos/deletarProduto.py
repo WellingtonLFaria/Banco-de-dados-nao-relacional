@@ -5,7 +5,7 @@ class DeletarProduto:
     def __init__(self, client: MongoClient):
         self.client = client
         self.db = self.client.MercadoLivre
-        self.collection = self.db.Produto
+        self.collection = self.db.Produtos
     
     def deletar(self):
         if len([produto for produto in self.collection.find()]) <= 0:

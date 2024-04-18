@@ -18,12 +18,15 @@ class AtualizarFavoritos:
 
             match k:
                 case 1:
-                    ListarProdutos(self.client).listar()
-                    produtoIndex = int(input("Selecione o produto que deseja adicionar aos favoritos: "))
-                    data = self.collection.find({})
-                    produtos = [produto for produto in data]
-                    produto = produtos[produtoIndex]
-                    self.favoritos.append(produto)
+                    if len([produto for produto in self.collection.find({})]) == 0:
+                        print("Não há produtos cadastrados")
+                    else:
+                        ListarProdutos(self.client).listar()
+                        produtoIndex = int(input("Selecione o produto que deseja adicionar aos favoritos: "))
+                        data = self.collection.find({})
+                        produtos = [produto for produto in data]
+                        produto = produtos[produtoIndex]
+                        self.favoritos.append(produto)
                 case 2:
                     if len(self.favoritos) == 0:
                         print("Não há produtos para remover")

@@ -5,7 +5,7 @@ class AtualizarVendedor:
     def __init__(self, client: MongoClient):
         self.client = client
         self.db = self.client.MercadoLivre
-        self.collection = self.db.Vendedor
+        self.collection = self.db.Vendedores
     
     def atualizar(self):
         if len([vendedor for vendedor in self.collection.find({})]) == 0:

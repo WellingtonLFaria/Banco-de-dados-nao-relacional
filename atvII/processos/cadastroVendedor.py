@@ -5,7 +5,7 @@ class CadastroVendedor:
     def __init__(self, client: MongoClient):
         self.client = client
         self.db = self.client.MercadoLivre
-        self.collection = self.db.Vendedor
+        self.collection = self.db.Vendedores
     
     def cadastrar(self):
         nome = input("Digite o nome do vendedor: ")
