@@ -19,8 +19,7 @@ from processos.update.atualizarProduto import AtualizarProduto
 from processos.update.atualizarVendedor import AtualizarVendedor
 from processos.update.atualizarVenda import AtualizarVenda
 from processos.verificarLogin import VerificarLogin
-
-import os
+from processos.create.cadastroProdutos import CadastroProdutos
 
 class Token:
     def __init__(self,  login: bool = False, username: str = None, password: str = None):
@@ -37,14 +36,16 @@ CLIENT_REDIS = processo.processar()
 token = Token()
 run = True
 while run:
-    os.system("cls")
     while True:
+        print("--------------")
+        print(" Autenticação")
+        print("--------------")
         print("1 - Realizar login")
         print("2 - Realizar cadastro")
         print("0 - Sair da aplicação")
         opcao = int(input())
         if opcao == 0:
-            login = False
+            token.login = False
             run = False
             break
         elif opcao == 1:
@@ -53,7 +54,7 @@ while run:
 
             processo = FazerLoginRedis(CLIENT_REDIS)
             login = processo.processar(username, password)
-            token.login = True
+            token.login = login
             token.username = username
             token.password = password
             if token.login: break
@@ -64,12 +65,13 @@ while run:
             processo = FazerCadastroRedis(CLIENT_REDIS)
             registrar = processo.processar(username, password)
 
-    if login:
+    if token.login:
         k = None
         while k != 0 and token.login:
             proc = VerificarLogin(CLIENT_REDIS, token)
+            proc.verificar()
             print("1 - Cadastrar usuário")
-            print("2 - Cadastrar produto")
+            print("2 - Cadastrar produtos")
             print("3 - Cadastrar vendedor")
             print("4 - Cadastrar venda")
             print("5 - Listar usuários")
@@ -93,7 +95,7 @@ while run:
                     processo = CadastroUsuario(CLIENT)
                     processo.cadastrar()
                 case 2:
-                    processo = CadastroProduto(CLIENT)
+                    processo = CadastroProdutos(CLIENT_REDIS, CLIENT)
                     processo.cadastrar()
                 case 3:
                     processo = CadastroVendedor(CLIENT)
