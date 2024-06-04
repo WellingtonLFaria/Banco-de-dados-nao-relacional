@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-from processos.listarUsuarios import ListarUsuarios
-from processos.listarProdutos import ListarProdutos
+from processos.read.listarUsuarios import ListarUsuarios
+from processos.read.listarProdutos import ListarProdutos
 
 class CadastroVenda:
     def __init__(self, client: MongoClient):

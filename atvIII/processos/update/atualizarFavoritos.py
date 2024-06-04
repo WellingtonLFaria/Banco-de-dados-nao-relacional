@@ -1,4 +1,4 @@
-from processos.listarProdutos import ListarProdutos
+from processos.read.listarProdutos import ListarProdutos
 from pymongo import MongoClient
 
 class AtualizarFavoritos:

@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from processos.listarVendas import ListarVendas
+from processos.read.listarVendas import ListarVendas
 
 class DeletarVenda:
     def __init__(self, client: MongoClient):

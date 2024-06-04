@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from processos.listarUsuarios import ListarUsuarios
+from processos.read.listarUsuarios import ListarUsuarios
 
 class DeletarUsuario:
     def __init__(self, client: MongoClient):

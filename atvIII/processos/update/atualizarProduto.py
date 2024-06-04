@@ -1,6 +1,6 @@
 from pymongo import MongoClient
-from processos.listarProdutos import ListarProdutos
-from processos.listarVendedores import ListarVendedores
+from processos.read.listarProdutos import ListarProdutos
+from processos.read.listarVendedores import ListarVendedores
 
 class AtualizarProduto:
     def __init__(self, client: MongoClient):

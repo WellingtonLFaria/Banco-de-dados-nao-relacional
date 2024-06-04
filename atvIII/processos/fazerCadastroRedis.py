@@ -6,7 +6,7 @@ class FazerCadastroRedis:
         try:
             redis_password = self.client_redis.get(username)
             if redis_password == None:
-                self.client_redis.set(username, password)
+                self.client_redis.setex(username, 10, password)
                 print("Cadastro realizado com sucesso!")
                 return True
             else:

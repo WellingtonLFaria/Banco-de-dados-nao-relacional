@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 
-from processos.atualizarEnderecos import AtualizarEnderecos
-from processos.atualizarFavoritos import AtualizarFavoritos
-from processos.listarUsuarios import ListarUsuarios
+from processos.update.atualizarEnderecos import AtualizarEnderecos
+from processos.update.atualizarFavoritos import AtualizarFavoritos
+from processos.read.listarUsuarios import ListarUsuarios
 
 from modelos.telefone import Telefone
 

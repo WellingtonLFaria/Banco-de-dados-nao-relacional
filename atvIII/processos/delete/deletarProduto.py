@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from processos import listarProdutos
+from processos.read.listarProdutos import ListarProdutos
 
 class DeletarProduto:
     def __init__(self, client: MongoClient):
@@ -11,7 +11,7 @@ class DeletarProduto:
         if len([produto for produto in self.collection.find()]) <= 0:
             print("Nenhum produto cadastrado!")
         else:
-            listarProdutos.ListarProdutos(self.client).listar()
+            ListarProdutos(self.client).listar()
             produtoIndex = int(input("Selecione o produto que deseja deletar: "))
             data = self.collection.find()
             produtos = [produto for produto in data]
