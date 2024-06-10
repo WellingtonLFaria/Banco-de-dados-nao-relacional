@@ -1,3 +1,4 @@
+from atvIII.processos.create.cadastroUsuarios import CadastroUsuarios
 from processos.conectarBanco import ConectarBanco
 from processos.conectarRedis import ConectarRedis
 from processos.fazerLoginRedis import FazerLoginRedis
@@ -70,7 +71,7 @@ while run:
         while k != 0 and token.login:
             proc = VerificarLogin(CLIENT_REDIS, token)
             proc.verificar()
-            print("1 - Cadastrar usuário")
+            print("1 - Cadastrar usuários")
             print("2 - Cadastrar produtos")
             print("3 - Cadastrar vendedor")
             print("4 - Cadastrar venda")
@@ -92,7 +93,7 @@ while run:
 
             match k:
                 case 1:
-                    processo = CadastroUsuario(CLIENT)
+                    processo = CadastroUsuarios(CLIENT_REDIS, CLIENT)
                     processo.cadastrar()
                 case 2:
                     processo = CadastroProdutos(CLIENT_REDIS, CLIENT)

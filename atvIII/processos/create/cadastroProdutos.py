@@ -3,7 +3,6 @@ from modelos.produto import Produto
 from modelos.vendedor import Vendedor
 from pprint import pprint
 import json
-from os import system
 
 class CadastroProdutos:
     def __init__(self, client_redis, client_mongo):
