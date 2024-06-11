@@ -75,7 +75,7 @@ class CadastroUsuarios:
                     usuario = self.cadastrarUsuario()
                     self.enviarUsuarioRedis(usuario.__dict__)
                 case 2:
-                    usuarios = self.getProdutosRedis()
+                    usuarios = self.getUsuariosRedis()
                     for usuario in usuarios:
                         print(usuarios.index(usuario), end=" - ")
                         pprint(usuario)
