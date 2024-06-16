@@ -1,4 +1,4 @@
-from atvIII.processos.create.cadastroUsuarios import CadastroUsuarios
+from processos.create.cadastroUsuarios import CadastroUsuarios
 from processos.conectarBanco import ConectarBanco
 from processos.conectarRedis import ConectarRedis
 from processos.fazerLoginRedis import FazerLoginRedis
