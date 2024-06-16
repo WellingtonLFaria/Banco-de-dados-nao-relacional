@@ -25,7 +25,8 @@
                 "estado": "SP",
                 "cep": "12345789"
             }
-        ]
+        ],
+        "favoritos": []
     },
     {
         "nome": "Fernando",
@@ -53,6 +54,7 @@
                 "estado": "SP",
                 "cep": "12345789"
             }
-        ]
+        ],
+        "favoritos": []
     }
 ]
