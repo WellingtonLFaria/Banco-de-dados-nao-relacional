@@ -1,6 +1,7 @@
 from time import localtime
 from db import DB
 from pprint import pprint
+import json
 
 db = DB()
 collUser = db.db.get_collection("user")
@@ -281,7 +282,7 @@ def excluirCompra():
     idCompra = int(input("Informe a compra que deseja excluir: "))
 
     compra = compras[idCompra]
-
+    compra["produtos"] = json.dumps(compra["produtos"])
     collCompra.delete_one(compra)
 
 
