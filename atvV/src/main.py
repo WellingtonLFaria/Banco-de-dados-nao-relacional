@@ -62,7 +62,7 @@ def cadastrarProduto():
     vendedores = db.buscarTodosVendedores()
     
     for vendedor in vendedores:
-        print(f"[{vendedores.index(vendedor)}] - {vendedor}")
+        print(f"[{vendedores.index(vendedor)}] - {vendedor._properties}")
     idVendedor = int(input("Selecione o vendedor do produto: "))
     vendedor = vendedores[idVendedor]
 
@@ -72,23 +72,23 @@ def cadastrarProduto():
 def cadastrarCompra():
     produtos = db.buscarTodosProdutos()
     for produto in produtos:
-        print(f"[{produtos.index(produto)}] - {produto}")
+        print(f"[{produtos.index(produto)}] - {produto._properties}")
     idProduto = int(input("Selecione o produto da compra: "))
     produto = produtos[idProduto]
 
     usuarios = db.buscarTodosUsuarios()
     for usuario in usuarios:
-        print(f"[{usuarios.index(usuario)}] - {usuario}")
+        print(f"[{usuarios.index(usuario)}] - {usuario._properties}")
     idUsuario= int(input("Selecione o usuário da compra: "))
     usuario = usuarios[idUsuario]
 
-    valor = produto.valor
+    valor = produto._properties['valor']
     data = f"{localtime().tm_mday}/{localtime().tm_mon}/{localtime().tm_year}"
 
     compra = Compra(usuario, [produto], valor, data)
     db.createCompra(compra)
 
-db.deleteAll()
+# db.deleteAll()
 
 while True:
     print("[1] Cadastrar usuário\n[2] Cadastrar vendedor\n[3] Cadastrar produto\n[4] Cadastrar compra\n[5] Listar usuários\n[6] Listar vendedores\n[7] Listar produtos\n[8] Listar compras\n[0] Sair")
