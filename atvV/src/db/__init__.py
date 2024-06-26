@@ -49,11 +49,17 @@ class DB:
     def createProduto(self, produto: Produto):
         with GraphDatabase.driver(self.URI, auth=self.AUTH) as driver:
             with driver.session() as session:
-                session.run("CREATE (p:Produto {nome: $nome, descricao: $descricao, valor: $valor, vendedor: $vendedor})", 
-                        nome=produto.nome, 
-                        descricao=produto.descricao, 
-                        valor=produto.valor, 
-                        vendedor=json.dumps(produto.vendedor))
+                session.run("CREATE (p:Produto {nome: $nome, descricao: $descricao, valor: $valor})", 
+                    nome=produto.nome, 
+                    descricao=produto.descricao, 
+                    valor=produto.valor)
+                print(produto.__dict__)
+                session.run("""
+                    MATCH (v:Vendedor {nome: $nomeVendedor}), (p:Produto {nome: $nomeProduto})
+                    CREATE (v)-[:VENDE]->(p)
+                    """,
+                    nomeVendedor=produto.__dict__["vendedor"]._properties["nome"],
+                    nomeProduto=produto.nome)
 
     def createCompra(self, compra: Compra):
         with GraphDatabase.driver(self.URI, auth=self.AUTH) as driver:
@@ -63,6 +69,14 @@ class DB:
                         produtos=json.dumps(compra.produtos), 
                         valor=compra.valor, 
                         data=compra.data)
+                
+                for produto in compra.produtos:
+                    session.run("""
+                        MATCH (u:Usuario {nome: $nomeUsuario}), (p:Produto {nome: ${nomeProduto})
+                        CREATE (u)-[:COMPROU]->(p)
+                        """,
+                        nomeUsuario=compra.usuario.nome,
+                        nomeProduto = produto.nome)
     
     def buscarTodosUsuarios(self):
         with GraphDatabase.driver(self.URI, auth=self.AUTH) as driver:
